@@ -44,7 +44,7 @@ else :
 ##--------------dependencies------------------
 
 ###-------------get Opencv------------------
-if not(user_input3=='y'or user_input2=='yes'):
+if not(user_input3=='y'or user_input3=='yes'):
     print('-------------Getting opencv--------------')
     output=os.system('wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip')
     output=os.system('unzip opencv.zip')+output
@@ -67,12 +67,23 @@ output1=os.system('cd opencv-3.1.0/build/;cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D INSTALL_PYTHON_EXAMPLES=ON \
     -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.1.0/modules \
     -D BUILD_EXAMPLES=ON ..')
+
 if output==0:
     print('success pre-install of opencv')
-elif output1==1:
+else :
+    print('failed pre-install of opencv')
+    
+if output1==1:
     print('Errors but should be fine...')
 else :
     print('failed pre-install of opencv')
+
+
+output=os.system('cd opencv-3.1.0/build/;make -j4')
+if output==0:
+    print('success make of opencv')
+else :
+    print('failed make of opencv')
 
 
 
