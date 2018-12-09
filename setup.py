@@ -44,7 +44,7 @@ else :
 ##--------------dependencies------------------
 
 ###-------------get Opencv------------------
-if not(user_input3=='y'or user_input3=='yes'):
+if user_input3!='y'or user_input3!='yes':
     print('-------------Getting opencv--------------')
     output=os.system('wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip')
     output=os.system('unzip opencv.zip')+output
