@@ -37,6 +37,15 @@ output=os.system('sudo apt-get install libxvidcore-dev libx264-dev -y')+output
 output=os.system('sudo apt-get install libgtk2.0-dev -y')+output
 output=os.system('sudo apt-get install libatlas-base-dev gfortran -y')+output
 output=os.system('sudo apt-get install python2.7-dev python3-dev -y')+output
+output=os.system('sudo apt-get install build-essential cmake cmake-curses-gui \
+                               pkg-config libpng12-0 libpng12-dev libpng++-dev \
+                               libpng3 libpnglite-dev zlib1g-dbg zlib1g zlib1g-dev \
+                               pngtools libtiff4-dev libtiff4 libtiffxx0c2 libtiff-tools libeigen3-dev;sudo apt-get install libjpeg8 libjpeg8-dev libjpeg8-dbg libjpeg-progs \
+                               ffmpeg libavcodec-dev libavcodec53 libavformat53 \
+                               libavformat-dev libxine1-ffmpeg libxine-dev libxine1-bin \
+                               libunicap2 libunicap2-dev swig libv4l-0 libv4l-dev \
+                               python-numpy libpython2.6 python-dev python2.6-dev libgtk2.0-dev')+output
+
 if output==0:
     print('success dependencies')
 else :
@@ -80,7 +89,7 @@ else :
     print('Errors but should be fine...')
 
 
-output=os.system('cd opencv-3.0.0/build/;make -j4')
+output=os.system('cd opencv-3.0.0/build/;make')
 if output==0:
     print('success make of opencv')
 else :
