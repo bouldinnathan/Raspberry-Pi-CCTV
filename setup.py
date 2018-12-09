@@ -29,13 +29,13 @@ if user_input=='y':
 #--------------update all----------------------
 
 print('Getting dependencies…')
-output=os.system('sudo apt-get install build-essential cmake pkg-config')
-output=os.system('sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev')+output
-output=os.system('sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev')+output
-output=os.system('sudo apt-get install libxvidcore-dev libx264-dev')+output
-output=os.system('sudo apt-get install libgtk2.0-dev')+output
-output=os.system('sudo apt-get install libatlas-base-dev gfortran')+output
-output=os.system('sudo apt-get install python2.7-dev python3-dev')+output
+output=os.system('sudo apt-get install build-essential cmake pkg-config -y')
+output=os.system('sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev -y')+output
+output=os.system('sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y')+output
+output=os.system('sudo apt-get install libxvidcore-dev libx264-dev -y')+output
+output=os.system('sudo apt-get install libgtk2.0-dev -y')+output
+output=os.system('sudo apt-get install libatlas-base-dev gfortran -y')+output
+output=os.system('sudo apt-get install python2.7-dev python3-dev -y')+output
 if output==0:
     print('success dependencies')
 else :
