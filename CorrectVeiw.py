@@ -218,7 +218,7 @@ while 1:
         cv2.waitKey(1)
         cv2.waitKey(1)
         #sys.exit()
-        os.system('python3 Start\ Here.py')
+        os.system('python3 Start_Here.py')
         quit()
 
 
