@@ -112,13 +112,15 @@ if (user_input4=='y'):
     #f= open("/etc/rc.local","w+")
     f= open("/home/pi/.config/lxsession/LXDE-pi/autostart","w")
     text='''@lxpanel --profile LXDE-pi\n@pcmanfm --desktop --profile LXDE-pi\n@xscreensaver -no-splash'''
-    text=text+'''@sleep 10 \n@sudo python3 '''+str(cwd)+'''/DesktopCover.py & \n@sudo python3 '''+str(cwd)+'''/Start\ Here.py &'''
+    text=text+'''\n@sleep 10 \n@sudo python3 '''+str(cwd)+'''/DesktopCover.py & \n@sudo python3 '''+str(cwd)+'''/Start\ Here.py &'''
     #output=os.system('sudo nano /etc/xdg/lxsession/LXDE-pi/autostart')
     print(text)
     user_input5=input('text'+'Is this correct (y/n)?')[0]
-    if not(user_input5=='y'):
+    if (user_input5=='y'):
         f.write(text)
+        f.flush()
         f.close()
+        
 time.sleep(5)
 #os.system('sudo reboot')
 
