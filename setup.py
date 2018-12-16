@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import time
 
 print("Answer all of the questions. The setup will run unattended after that(~2hrs).")
 user_input=input('Would you like to update all (y/n)?')[0]
@@ -109,7 +110,7 @@ if (user_input3=='y'):
 if (user_input4=='y'):
     cwd = os.getcwd()
     #f= open("/etc/rc.local","w+")
-    f= open("/home/pi/.config/lxsession/LXDE-pi/autostart","w+")
+    f= open("/home/pi/.config/lxsession/LXDE-pi/autostart","w")
     text=f.read()
     text=text+'''@sleep 10 \n@sudo python3 '''+str(cwd)+'''/DesktopCover.py & \n@sudo python3 '''+str(cwd)+'''/Start\ Here.py &'''
     #output=os.system('sudo nano /etc/xdg/lxsession/LXDE-pi/autostart')
@@ -117,8 +118,9 @@ if (user_input4=='y'):
     user_input5=input('text'+'Is this correct (y/n)?')[0]
     if not(user_input5=='y'):
         f.write(text)
-    f.close()
-os.system('sudo reboot')
+        f.close()
+time.sleep(5)
+#os.system('sudo reboot')
 
         
     
