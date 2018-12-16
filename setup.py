@@ -109,7 +109,7 @@ if (user_input3=='y'):
 if (user_input4=='y'):
     cwd = os.getcwd()
     #f= open("/etc/rc.local","w+")
-    f= open("/etc/xdg/lxsession/LXDE-pi/autostart","w+")
+    f= open("/home/pi/.config/lxsession/LXDE-pi/autostart","w+")
     text=f.read()
     text=text+'''@sleep 10 \n@sudo python3 '''+str(cwd)+'''/DesktopCover.py & \n@sudo python3 '''+str(cwd)+'''/Start\ Here.py &'''
     #output=os.system('sudo nano /etc/xdg/lxsession/LXDE-pi/autostart')
