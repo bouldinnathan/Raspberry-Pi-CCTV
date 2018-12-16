@@ -110,7 +110,7 @@ if (user_input4=='y'):
     cwd = os.getcwd()
     f= open("/etc/rc.local","w+")
     text=f.read()
-    text=text+'''sleep 10 \n sudo python3 '''+str(cwd)+'''DesktopCover.py \n sudo python3 '''+str(cwd)+'''/Start\ Here.py & \n exit 0'''
+    text=text+''' sleep 10 \n sudo python3 '''+str(cwd)+'''DesktopCover.py & \n sudo python3 '''+str(cwd)+'''/Start\ Here.py & \n exit 0'''
     #output=os.system('sudo nano /etc/xdg/lxsession/LXDE-pi/autostart')
     print(text)
     user_input5=input('text'+'Is this correct (y/n)?')[0]
