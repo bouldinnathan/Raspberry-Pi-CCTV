@@ -38,7 +38,7 @@ output=os.system('sudo apt-get install libavcodec-dev libavformat-dev libswscale
 output=os.system('sudo apt-get install libxvidcore-dev libx264-dev -y')+output
 output=os.system('sudo apt-get install libgtk2.0-dev -y')+output
 output=os.system('sudo apt-get install libatlas-base-dev gfortran -y')+output
-#output=os.system('sudo apt-get install python2.7-dev python3-dev -y')+output
+output=os.system('sudo apt-get install python2.7-dev python3-dev -y')+output
 
 #output=os.system('sudo apt-get install build-essential cmake cmake-curses-gui \
 #                               pkg-config libpng12-0 libpng12-dev libpng++-dev \
@@ -56,7 +56,7 @@ else :
 ##--------------dependencies------------------
 
 ###-------------get Opencv------------------
-if not(user_input3=='y'):
+if (user_input3=='y'):
     print('-------------Getting opencv--------------')
     output=os.system('wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.0.0.zip')
     output=os.system('unzip opencv.zip')+output
@@ -106,7 +106,7 @@ if not(user_input3=='y'):
     else :
         print('failed removing files')
 ####-------------autostart------------------
-if not(user_input4=='y'):
+if (user_input4=='y'):
     cwd = os.getcwd()
     f= open("/etc/rc.local","w+")
     text=f.read()
