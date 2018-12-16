@@ -38,7 +38,8 @@ output=os.system('sudo apt-get install libavcodec-dev libavformat-dev libswscale
 output=os.system('sudo apt-get install libxvidcore-dev libx264-dev -y')+output
 output=os.system('sudo apt-get install libgtk2.0-dev -y')+output
 output=os.system('sudo apt-get install libatlas-base-dev gfortran -y')+output
-output=os.system('sudo apt-get install python2.7-dev python3-dev -y')+output
+#output=os.system('sudo apt-get install python2.7-dev python3-dev -y')+output
+
 #output=os.system('sudo apt-get install build-essential cmake cmake-curses-gui \
 #                               pkg-config libpng12-0 libpng12-dev libpng++-dev \
 #                               libpng3 libpnglite-dev zlib1g-dbg zlib1g zlib1g-dev \
