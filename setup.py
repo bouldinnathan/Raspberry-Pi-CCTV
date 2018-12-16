@@ -112,7 +112,7 @@ if (user_input4=='y'):
     #f= open("/etc/rc.local","w+")
     f= open("/home/pi/.config/lxsession/LXDE-pi/autostart","w")
     text='''@lxpanel --profile LXDE-pi\n@pcmanfm --desktop --profile LXDE-pi\n@xscreensaver -no-splash'''
-    text=text+'''\n@sleep 10 \n@sudo python3 '''+str(cwd)+'''/DesktopCover.py & \n@sudo python3 '''+str(cwd)+'''/Start\ Here.py &'''
+    text=text+'''\n@sleep 10 \n@sudo python3 '''+str(cwd)+'''/DesktopCover.py & \n@sudo python3 '''+str(cwd)+'''/Start\ Here.py &\n'''
     text=text+'''sudo rm /home/pi/lock.txt'''
     #output=os.system('sudo nano /etc/xdg/lxsession/LXDE-pi/autostart')
     print(text)
