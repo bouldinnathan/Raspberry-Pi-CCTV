@@ -123,7 +123,7 @@ if (user_input4=='y'):
         f.close()
         
 time.sleep(5)
-#os.system('sudo reboot')
+os.system('sudo reboot')
 
         
     
