@@ -122,14 +122,14 @@ if (user_input4=='y'):
         f.flush()
         f.close()
         #adding absolute 
-        f= open(str(cwd)+"/Start_Here.py","w")
+        f= open(str(cwd)+"/Start_Here.py","wr")
         text=f.read()
         text=text.replace('''working_dirctory=''''','working_dirctory='+"'"+str(cwd)+'/'+"'")
         f.write(text)
         f.flush()
         f.close()
         #adding absolute
-        f= open(str(cwd)+"/CorrectVeiw.py","w")
+        f= open(str(cwd)+"/CorrectVeiw.py","wr")
         text=f.read()
         text=text.replace('''working_dirctory=''''','working_dirctory='+"'"+str(cwd)+'/'+"'")
         f.write(text)
