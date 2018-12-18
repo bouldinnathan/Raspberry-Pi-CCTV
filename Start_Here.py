@@ -92,6 +92,7 @@ from math import floor
 
 #/////lock file (there can only be one)\\\\\\\\
 location='/home/pi/lock.txt'
+working_dirctory=''
 read_data=0
 try:
     f=open(location,'r')
@@ -370,7 +371,7 @@ def loop(cam,d,parent_conn):
             #sys.exit()
             print("Changing")
             osOutput = subprocess.getoutput(["sudo rm "+location])#this allows the program to be started back up
-            os.system('python3 CorrectVeiw.py')
+            os.system('python3 '+working_dirctory+'CorrectVeiw.py')
             quit()
             #<<<<<<<<>>>>>>>>>>>
         
@@ -433,7 +434,7 @@ def popup_showinfo():
     #    okPopButton = tkinter.Button(popUpAbout,width=10, text='OK',font=helv36,command=lambda: killThisWindow(popUpAbout))
     #    okPopButton.grid(row=1, column=0,columnspan=1)
     #    popUpAbout.mainloop()
-    os.system('python3 about.py')
+    os.system('python3 '+working_dirctory+'about.py')
     
 
     

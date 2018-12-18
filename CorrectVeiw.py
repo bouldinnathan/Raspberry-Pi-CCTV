@@ -57,6 +57,7 @@ import os
 
 displayImgMultiplier=.50 #edit to fit screen
 location='/home/pi/currentPic.png'
+working_dirctory=''
 img0=cv2.imread(location,1)
 
 keyPress=-1
@@ -218,7 +219,7 @@ while 1:
         cv2.waitKey(1)
         cv2.waitKey(1)
         #sys.exit()
-        os.system('python3 Start_Here.py')
+        os.system('python3 '+working_dirctory+'Start_Here.py')
         quit()
 
 

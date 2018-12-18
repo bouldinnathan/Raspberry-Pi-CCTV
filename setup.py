@@ -121,6 +121,21 @@ if (user_input4=='y'):
         f.write(text)
         f.flush()
         f.close()
+        #adding absolute 
+        f= open(str(cwd)"/Start_Here.py","w")
+        text=f.read()
+        text=text.replace('''working_dirctory=''''','working_dirctory='+"'"+str(cwd)+'/'+"'")
+        f.write(text)
+        f.flush()
+        f.close()
+        #adding absolute
+        f= open(str(cwd)"/CorrectVeiw.py","w")
+        text=f.read()
+        text=text.replace('''working_dirctory=''''','working_dirctory='+"'"+str(cwd)+'/'+"'")
+        f.write(text)
+        f.flush()
+        f.close()
+        
         
 time.sleep(5)
 os.system('sudo reboot')
